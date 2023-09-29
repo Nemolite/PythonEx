@@ -19,11 +19,7 @@ class Example:
                 elif ch is ['+','-','/','*']:
                     print("Вы неправильно ввели операцию")
 
-        return [a,b,ch]
-
-    def seting(self):
-        if (self.get_data_user()!=None):
-            self.a,self.b,self.ch = self.get_data_user()
+        self.a,self.b,self.ch =  [a,b,ch]
 
     def refresh(self):
         match self.ch:
@@ -38,9 +34,7 @@ class Example:
 
     def full(self):
         self.get_data_user()
-        self.seting()
         self.refresh()
         print(self.res)
-
 
 Example().full()
