@@ -1,40 +1,54 @@
 class Example:
-    def get_data_user(self):
-        marker = True
-        while marker:
-            try:
-                a = int(input("Введите первое число = "))
-                b = int(input("Введите второе число = "))
-                ch = input("Введите операцию = ")
-                marker = False
-            except:
-                print("Вы ввели неправильно данные")
-            finally:
-                if a is None:
-                    print("Вы ввели неправильно первое число")
-                elif b is None:
-                    print("Вы ввели неправильно второе число")
-                elif ch is None:
-                    print("Вы не ввели операцию")
-                elif ch is ['+','-','/','*']:
-                    print("Вы неправильно ввели операцию")
-
-        self.a,self.b,self.ch =  [a,b,ch]
-
+    ''' Класс принимает от пользователя переменные и в зависимости от операции
+    выполняет арифметическую операцию'''
     def refresh(self):
+        ''' Выполнения арифметических операции'''
         match self.ch:
             case '+':
-                self.res = self.a + self.b
+                self.res = self.x + self.y
             case '-':
-                self.res = self.a - self.b
+                self.res = self.x - self.y
             case '/':
-                self.res = self.a / self.b
+                self.res = self.x / self.y
             case '*':
-                self.res = self.a * self.b
+                self.res = self.x * self.y
+            case _:
+                self.res = None
+        return self.res
 
-    def full(self):
-        self.get_data_user()
-        self.refresh()
-        print(self.res)
+    def set_x(self):
+        ''' Получение первого числа '''
+        while True:
+            x = input("Введите первое число: ")
+            if not x.isnumeric():
+                print("Вы ввели не число. Попробуйте снова: ")
+            else:
+                self.x = int(x)
+                break
 
-Example().full()
+    def set_y(self):
+        ''' Получение второго числа '''
+        while True:
+            y = input("Введите второе число: ")
+            if not y.isnumeric():
+                print("Вы ввели не число. Попробуйте снова: ")
+            else:
+                self.y = int(y)
+                break
+
+    def set_ch(self):
+        ''' Получение символа арифметической операции '''
+        while True:
+            ch = input("Введите арифметическую операцию: ")
+            if ch not in '+-/*':
+                print("Вы ввели неправильно. Попробуйте снова: ")
+            else:
+                self.ch = ch
+                break
+
+d = Example()
+d.set_x()
+d.set_y()
+d.set_ch()
+d.refresh()
+print(d.res)
