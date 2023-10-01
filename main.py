@@ -53,13 +53,27 @@
 # d.refresh()
 # print(d.res,end='')
 
-class Test:
-    pass
+# class Test:
+#     pass
+#
+# d = Test
+# list1 = dir(d)
+# print(type(list1))
+#
+# for i in list1:
+#     print(i)
 
-d = Test
-list1 = dir(d)
-print(type(list1))
+class Person:
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
 
-for i in list1:
-    print(i)
+    def amarok(self,c):
+        print(c)
+        return c
+
+lider = Person(2,3)
+Person.amarok(lider,4)
+
+
 
