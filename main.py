@@ -63,17 +63,34 @@
 # for i in list1:
 #     print(i)
 
-class Person:
+# class Person:
+#     def __init__(self,a,b):
+#         self.a = a
+#         self.b = b
+#
+#     def amarok(self,c):
+#         print(c)
+#         return c
+#
+# lider = Person(2,3)
+# Person.amarok(lider,4)
+
+class Students:
+    c = 12
     def __init__(self,a,b):
-        self.a = a
-        self.b = b
+        self.varA = a
+        self.varB = b
 
-    def amarok(self,c):
+    def jobpfanc(self,de):
+        self._pfunc(de)
+
+    def _pfunc(self,c):
         print(c)
-        return c
 
-lider = Person(2,3)
-Person.amarok(lider,4)
+st = Students(3,4)
+st.jobpfanc(243)
+st._pfunc(241) # не рекомендуется
+
 
 
 
