@@ -53,13 +53,30 @@
 # d.refresh()
 # print(d.res,end='')
 
-class Test:
-    pass
+# class Test:
+#     pass
+#
+# d = Test()
+# list1 = dir(d)
+# print(type(list1))
+#
+# for i in list1:
+#     print(i)
 
-d = Test
-list1 = dir(d)
-print(type(list1))
+class Test2:
+    def __init__(self,c,d):
+        self.c = c
+        self.d =d
+    def adrok(self,a):
+        print(a)
+        return a
+re = Test2(2,3)
+Test2.adrok(re,2)
 
-for i in list1:
-    print(i)
+print(dir(re))
+print(re.__dict__)
+print(re.__class__)
+
+
+
 
