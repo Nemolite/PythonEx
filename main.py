@@ -1,3 +1,6 @@
+from collections import namedtuple
+
+
 class Person:
     pass
 
@@ -49,6 +52,14 @@ class Exam3:
         print('__init__')
 
 obj3 = Exam3()
+
+def m(a,*,b):
+    return a,b
+
+print(m(1,b=2))
+
+LatLon = namedtuple('LatLon', 'lat lon')
+print(type(LatLon))
 
 
 
