@@ -30,6 +30,17 @@ print(obj1.__dict__)
 # Я появлюсь при создании объекта
 # {'a': 1, 'b': 2}
 
+class Exam2:
+    def __init__(self):
+        print('__init__')
+
+    def __del__(self):
+        print('__del__')
+
+
+obj2 = Exam2()
+input('Enter to stop')
+
 
 
 
