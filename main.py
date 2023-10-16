@@ -75,12 +75,31 @@ class Exam:
     # def __init__(self,a):
     #     self.a = a
 
+    def __setattr__(self, key, value):
+        print(key)
+        print(value)
+
+    # Срабатывает при обращение к атрибуту класса
     def __getattribute__(self, item):
         print('__getattribute__')
-        # return object.__getattribute__(self,item)
+        return object.__getattribute__(self,item)
+
+    # Срабатывает при обращение к несуществующему атрибуту класса
+    def __getattr__(self, item):
+        print('__getattr__')
+
+    def __delattr__(self, item):
+        print('__delattr__')
+
+
 
 obj = Exam()
 ic(obj.a)
+ic(obj.s)
+
+obj.a =12
+del obj.s
+
 
 
 
