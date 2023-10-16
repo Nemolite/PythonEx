@@ -61,3 +61,30 @@
 # LatLon = namedtuple('LatLon', 'lat lon')
 # print(type(LatLon))
 
+
+from icecream import ic
+def fanc(a,b):
+    rs = a * b
+    ic(rs)
+    return rs
+
+print(fanc(2,3))
+
+class Exam:
+    a = 11
+    # def __init__(self,a):
+    #     self.a = a
+
+    def __getattribute__(self, item):
+        print('__getattribute__')
+        # return object.__getattribute__(self,item)
+
+obj = Exam()
+ic(obj.a)
+
+
+
+
+
+
+
