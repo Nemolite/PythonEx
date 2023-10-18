@@ -63,42 +63,70 @@
 
 
 from icecream import ic
-def fanc(a,b):
-    rs = a * b
-    ic(rs)
-    return rs
-
-print(fanc(2,3))
+# def fanc(a,b):
+#     rs = a * b
+#     ic(rs)
+#     return rs
+#
+# print(fanc(2,3))
+#
+# class Exam:
+#     a = 11
+#     # def __init__(self,a):
+#     #     self.a = a
+#
+#     def __setattr__(self, key, value):
+#         print(key)
+#         print(value)
+#
+#     # Срабатывает при обращение к атрибуту класса
+#     def __getattribute__(self, item):
+#         print('__getattribute__')
+#         return object.__getattribute__(self,item)
+#
+#     # Срабатывает при обращение к несуществующему атрибуту класса
+#     def __getattr__(self, item):
+#         print('__getattr__')
+#
+#     def __delattr__(self, item):
+#         print('__delattr__')
+#
+#
+#
+# obj = Exam()
+# ic(obj.a)
+# ic(obj.s)
+#
+# obj.a =12
+# del obj.s
 
 class Exam:
-    a = 11
-    # def __init__(self,a):
-    #     self.a = a
+    def get_a(self):
+        return self.__a
 
-    def __setattr__(self, key, value):
-        print(key)
-        print(value)
+    def set_a(self,a):
+        self.__a = a
 
-    # Срабатывает при обращение к атрибуту класса
-    def __getattribute__(self, item):
-        print('__getattribute__')
-        return object.__getattribute__(self,item)
-
-    # Срабатывает при обращение к несуществующему атрибуту класса
-    def __getattr__(self, item):
-        print('__getattr__')
-
-    def __delattr__(self, item):
-        print('__delattr__')
-
-
+    a = property(get_a, set_a)
 
 obj = Exam()
+obj.a = 12
 ic(obj.a)
-ic(obj.s)
 
-obj.a =12
-del obj.s
+
+class Exam2:
+    @property
+    def a(self):
+        return self.__a
+    @a.setter
+    def a(self,a):
+        self.__a = a
+
+
+obj2 = Exam2()
+obj2.a = 12
+ic(obj.a)
+
 
 
 
