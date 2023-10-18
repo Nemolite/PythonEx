@@ -127,6 +127,13 @@ obj2 = Exam2()
 obj2.a = 12
 ic(obj.a)
 
+class Modi:
+    def __call__(self,a,b, *args, **kwargs):
+        return a + b
+
+obj3 = Modi()
+ic(obj3(2,3))
+
 
 
 
