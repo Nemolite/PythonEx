@@ -148,6 +148,10 @@ def mfu(a):
 mfu = Real(mfu)
 ic(mfu(4))
 
+A = [2, 1, 10, 3, 4, 5, 11, 10]
+B = [3, 5, 7, 9, 5]
+ic(sum(A+B))
+
 
 
 
