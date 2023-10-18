@@ -135,6 +135,22 @@ obj3 = Modi()
 ic(obj3(2,3))
 
 
+class Real:
+    def __init__(self, func):
+        self.__fn = func
+
+    def __call__(self, x, *args, **kwargs):
+        return self.__fn(x + 100)
+
+def mfu(a):
+    return a
+
+mfu = Real(mfu)
+ic(mfu(4))
+
+
+
+
 
 
 
