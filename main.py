@@ -60,7 +60,7 @@
 #
 # LatLon = namedtuple('LatLon', 'lat lon')
 # print(type(LatLon))
-
+import random
 
 from icecream import ic
 # def fanc(a,b):
@@ -100,57 +100,77 @@ from icecream import ic
 # obj.a =12
 # del obj.s
 
-class Exam:
-    def get_a(self):
-        return self.__a
+# class Exam:
+#     def get_a(self):
+#         return self.__a
+#
+#     def set_a(self,a):
+#         self.__a = a
+#
+#     a = property(get_a, set_a)
+#
+# obj = Exam()
+# obj.a = 12
+# ic(obj.a)
+#
+#
+# class Exam2:
+#     @property
+#     def a(self):
+#         return self.__a
+#     @a.setter
+#     def a(self,a):
+#         self.__a = a
+#
+#
+# obj2 = Exam2()
+# obj2.a = 12
+# ic(obj.a)
+#
+# class Modi:
+#     def __call__(self,a,b, *args, **kwargs):
+#         return a + b
+#
+# obj3 = Modi()
+# ic(obj3(2,3))
+#
+#
+# class Real:
+#     def __init__(self, func):
+#         self.__fn = func
+#
+#     def __call__(self, x, *args, **kwargs):
+#         return self.__fn(x + 100)
+#
+# def mfu(a):
+#     return a
+#
+# mfu = Real(mfu)
+# ic(mfu(4))
+#
+# A = [2, 1, 10, 3, 4, 5, 11, 10]
+# B = [3, 5, 7, 9, 5]
+# ic(sum(A+B))
+#
+# A1 = {2, 3}
+# ic(A1)
 
-    def set_a(self,a):
-        self.__a = a
 
-    a = property(get_a, set_a)
-
-obj = Exam()
-obj.a = 12
-ic(obj.a)
-
-
-class Exam2:
-    @property
-    def a(self):
-        return self.__a
-    @a.setter
-    def a(self,a):
-        self.__a = a
+from random import randint
+n = int(input("Введите 1 число = "))
+m = int(input("Введите 2 число = "))
+arrN = [random.randint(1,100) for i in range(n)]
+arrM = [random.randint(1,100) for i in range(m)]
+print(len(set(arrN).intersection(set(arrM))))
 
 
-obj2 = Exam2()
-obj2.a = 12
-ic(obj.a)
-
-class Modi:
-    def __call__(self,a,b, *args, **kwargs):
-        return a + b
-
-obj3 = Modi()
-ic(obj3(2,3))
+# uarrN = set(arrN)
+# uarrM = set(arrM)
+# result = uarrN.intersection(uarrM)
+# ic(result)
+# ic(len(result))
 
 
-class Real:
-    def __init__(self, func):
-        self.__fn = func
-
-    def __call__(self, x, *args, **kwargs):
-        return self.__fn(x + 100)
-
-def mfu(a):
-    return a
-
-mfu = Real(mfu)
-ic(mfu(4))
-
-A = [2, 1, 10, 3, 4, 5, 11, 10]
-B = [3, 5, 7, 9, 5]
-ic(sum(A+B))
 
 
 
