@@ -156,12 +156,12 @@ from icecream import ic
 # ic(A1)
 
 
-from random import randint
-n = int(input("Введите 1 число = "))
-m = int(input("Введите 2 число = "))
-arrN = [random.randint(1,100) for i in range(n)]
-arrM = [random.randint(1,100) for i in range(m)]
-print(len(set(arrN).intersection(set(arrM))))
+# from random import randint
+# n = int(input("Введите 1 число = "))
+# m = int(input("Введите 2 число = "))
+# arrN = [random.randint(1,100) for i in range(n)]
+# arrM = [random.randint(1,100) for i in range(m)]
+# print(len(set(arrN).intersection(set(arrM))))
 
 
 # uarrN = set(arrN)
@@ -169,6 +169,28 @@ print(len(set(arrN).intersection(set(arrM))))
 # result = uarrN.intersection(uarrM)
 # ic(result)
 # ic(len(result))
+
+# def DictPascalTriangle(rows):
+#     pascal_triangle = [1]
+#     dict_pascal_triangle = {0:pascal_triangle}
+#     for i in range(rows):
+#         print(dict_pascal_triangle)
+#         pascal_triangle = [sum(x) for x in zip([0] + pascal_triangle, pascal_triangle + [0])]
+#         dict_pascal_triangle = {i+1:pascal_triangle}
+#
+# N = int(input("Введите число = "))
+# DictPascalTriangle(N)
+
+a = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+N = int(input("Введите число = "))
+if (N in a):
+    index = a.index(N)
+    arrA = list(a)
+    arrA.pop(index)
+    a = tuple(arrA)
+    print(a)
+else:
+    print(a)
 
 
 
