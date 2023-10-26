@@ -181,18 +181,23 @@ from icecream import ic
 # N = int(input("Введите число = "))
 # DictPascalTriangle(N)
 
-a = (1, 2, 3, 4, 5, 6, 7, 8, 9)
-N = int(input("Введите число = "))
-if (N in a):
-    index = a.index(N)
-    arrA = list(a)
-    arrA.pop(index)
-    a = tuple(arrA)
-    print(a)
-else:
-    print(a)
+# a = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+# N = int(input("Введите число = "))
+# if (N in a):
+#     index = a.index(N)
+#     arrA = list(a)
+#     arrA.pop(index)
+#     a = tuple(arrA)
+#     print(a)
+# else:
+#     print(a)
 
+# print('Первый список самы длинный' if len(input("Введите 1 список = "))>len(input("Введите 2 список = ")) else 'Второй список самый длинный')
 
+class Main:
+    def __init__(self):
+        print('Создание объекта Main')
+obj = Main()
 
 
 
